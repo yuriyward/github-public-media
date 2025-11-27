@@ -134,6 +134,14 @@ async function main() {
   }
 
   console.log(url);
+
+  // Copy to clipboard (macOS)
+  try {
+    spawnSync('pbcopy', { input: url });
+    console.log('✓ Copied to clipboard');
+  } catch (err) {
+    // pbcopy not available, skip
+  }
 }
 
 main().catch(err => {
