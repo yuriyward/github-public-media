@@ -1,0 +1,22 @@
+{
+  "name": "github-public-media-cli",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Interactive CLI to select media files and generate GitHub links",
+  "bin": {
+    "media-link": "cli/index.js"
+  },
+  "scripts": {
+    "start": "bun run cli/index.js",
+    "dev": "bun run cli/index.js",
+    "media-link": "bun run cli/index.js",
+    "build": "echo 'No build step needed'",
+    "link": "bun link"
+  },
+  "dependencies": {
+    "globby": "^14.0.2",
+    "meow": "^13.1.0",
+    "ora": "^8.0.1",
+    "prompts": "^2.4.2"
+  }
+}
